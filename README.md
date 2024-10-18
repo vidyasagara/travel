@@ -1,2 +1,2 @@
 # travel
-Travel and Tourism Chatbot
+Travel and Tourism Info Chatbot
