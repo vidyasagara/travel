@@ -16,7 +16,7 @@ prompt=ChatPromptTemplate.from_messages(
 repo_id="mistralai/Mistral-7B-Instruct-v0.3"
 
 def generate_response(question):
-    llm=HuggingFaceEndpoint(repo_id=repo_id,max_length=150,temperature=0.7,token=st.secrets("HF_TOKEN"))
+    llm=HuggingFaceEndpoint(repo_id=repo_id,max_length=150,temperature=0.7,token=st.secrets["HF_TOKEN"])
     output_parser=StrOutputParser()
     chain=prompt|llm|output_parser
     answer=chain.invoke({'question':question})
